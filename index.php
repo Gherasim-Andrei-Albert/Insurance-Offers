@@ -73,7 +73,7 @@ class offer {
 
     $netValue = $yearlyNet;
     if ($this->paymentInterval != 12) {
-      $netValue = $yearlyNet / 12;
+      $netValue = ($yearlyNet / 12) * $this->paymentInterval;
     }
     $this->netPremium = new CurrencyValue(
       $netValue, Currency::euro
